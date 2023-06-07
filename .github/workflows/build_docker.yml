@@ -32,6 +32,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
+    
     - name: Push Image
-      run: docker push gibeonufrn/hello-spring
+      run: docker tag hello-spring:latest gibeonufrn/hello-spring && docker push gibeonufrn/hello-spring
       
